@@ -1,4 +1,4 @@
-var express = require('express');
+ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -31,6 +31,8 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+app.listen(3000, () => console.log('Example listen on port 3000!'));
 
 // error handler
 app.use(function(err, req, res, next) {
